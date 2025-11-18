@@ -48,3 +48,28 @@ rm /home/karthik558/Workspace/Anykernel/RyZeN-violet-S-$DATE.zip
 rm /home/karthik558/Workspace/Anykernel/Image.gz-dtb
 
 # Signzip using zipsigner
+make O=out vendor/violet-perf_defconfig
+PATH="$MPATH" make -j16 O=out \
+    NM=llvm-nm \
+    OBJCOPY=llvm-objcopy \
+    LD=ld.lld \
+        CROSS_COMPILE=aarch64-linux-gnu- \
+        CROSS_COMPILE_ARM32=arm-linux-gnueabi- \
+        CC=clang \
+        AR=llvm-ar \
+        OBJDUMP=llvm-objdump \
+        STRIP=llvm-strip \
+        2>&1 | tee error.log
+
+# Copying Image.gz-dtb to anykernel
+cp out/arch/arm64/boot/Image.gz-dtb /home/karthik558/Workspace/Anykernel
+cd /home/karthik558/Workspace/Anykernel
+
+# Ziping Kernel using Anykernel
+if [ -f "Image.gz-dtb" ]; then
+    zip -r9 RyZeN-violet-S-$DATE.zip * -x .git README.md *placeholder
+cp /home/karthik558/Workspace/Anykernel/RyZeN-violet-S-$DATE.zip /home/karthik558/Workspace/
+rm /home/karthik558/Workspace/Anykernel/RyZeN-violet-S-$DATE.zip
+rm /home/karthik558/Workspace/Anykernel/Image.gz-dtb
+
+# Signzip using zipsigner
