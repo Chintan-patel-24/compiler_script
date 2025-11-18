@@ -19,8 +19,6 @@ HOW TO USE THIS SCRIPT
 </div>
 
 ---
-
-<div align=center>
     
 export ARCH=arm64 - Change according to your device 
 export SUBARCH=arm64 - Change according to your device 
