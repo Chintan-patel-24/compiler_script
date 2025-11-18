@@ -14,7 +14,7 @@ HOW TO USE THIS SCRIPT
 
 <div align=center>
     
-<<< Explaining the script components >>>
+## <<< Explaining the script components >>>
 
 </div>
 
