@@ -1,5 +1,6 @@
 # compiler script for the normal uses !!
 
+---
 
 HOW TO USE THIS SCRIPT
 
@@ -11,7 +12,13 @@ HOW TO USE THIS SCRIPT
 
 - ./"script".sh
 
+<div align=center>
+    
 <<< Explaining the script components >>>
+
+</div>
+
+---
 
 export ARCH=arm64 - Change according to your device 
 
