@@ -73,3 +73,4 @@ rm /home/karthik558/Workspace/Anykernel/RyZeN-violet-S-$DATE.zip
 rm /home/karthik558/Workspace/Anykernel/Image.gz-dtb
 
 # Signzip using zipsigner
+# ................................................................................
