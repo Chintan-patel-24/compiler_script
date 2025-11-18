@@ -28,8 +28,6 @@ rm -f out/arch/arm64/boot/Image.gz-dtb - Removing previously compiled kernel Ima
 make O=out vendor/violet-perf_defconfig - Show your deconfig file
 PATH="$MPATH" make -j32 O=out \ - j= no of cores
 
-</div>
-
 NM=llvm-nm \
     OBJCOPY=llvm-objcopy \
     LD=ld.lld \               - This are kernel need files
