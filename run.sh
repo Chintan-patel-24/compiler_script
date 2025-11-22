@@ -74,4 +74,3 @@ rm /home/karthik558/Workspace/Anykernel/Image.gz-dtb
 
 # Signzip using zipsigner
 # ................................................................................
-
